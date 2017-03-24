@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent">
+
+
+    <!--  下层view   播放view  -->
+    <com.tencent.rtmp.ui.TXCloudVideoView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/video_view"
+        ></com.tencent.rtmp.ui.TXCloudVideoView>
+
+    <!-- 上层 view  -->
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:orientation="vertical"
+       android:id="@+id/topPanel"
+       android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/right_shap"
+        >
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/ivTeacherLogo"
+            android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ivTeacherLogo"
+            android:layout_toRightOf="@+id/ivTeacherLogo"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/tvTeacherNick"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:text="曹老师轮毂"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tvTeacherNick"
+            android:layout_below="@+id/tvTeacherNick"
+            android:layout_marginTop="3dp"
+            android:textColor="@android:color/white"
+            android:textSize="10sp"
+            android:text="3688人在线"/>
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_launcher"
+            android:layout_alignParentRight="true"/>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="3dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:id="@+id/userLogo1"
+            android:src="@mipmap/ic_launcher"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:id="@+id/userLogo2"
+            android:layout_marginLeft="3dp"
+            android:src="@mipmap/ic_launcher"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:id="@+id/userLogo3"
+            android:layout_marginLeft="3dp"
+            android:src="@mipmap/ic_launcher"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:id="@+id/userLogo4"
+            android:layout_marginLeft="3dp"
+            android:src="@mipmap/ic_launcher"/>
+    </LinearLayout>
+
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lvMsg"
+        android:dividerHeight="0dp"
+        android:divider="@android:color/transparent"
+        android:layout_marginTop="250dp"
+        ></ListView>
+   </LinearLayout>
+
+
+</RelativeLayout>
